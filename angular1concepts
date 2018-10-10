@@ -1,0 +1,17 @@
+when node version is properly installed then install using node package manager:
+
+npm uninstall -g angular-cli
+npm cache clean
+npm install -g angular-cli@1.0.0-beta.32(supports node version with 6.11.1)
+
+
+now a days no where it is used in projects even official angularjs developers not providing any kind of documentation/support. reason for restricting of this version is that you can find much more improvements in later versions.
+
+angular1concepts:(git hub repositories)
+i)Routing.- example application
+ii)directives.- example application
+iii)filters.- example application
+iv)services.- example application
+v)figlet(js... content style development)- example application
+vi)pre-defined sevice- example application
+vii)application on this concepts.- example application

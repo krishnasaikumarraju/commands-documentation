@@ -1,0 +1,18 @@
+>mongo commands (errors you may get check those accordingly)
+Basic level issues you may face for linux users (check the below errors if you face any kind of issues follow the following steps):
+- follow the mongodb official website commands for installation.
+Any kind of basic level issues follow these(max you can solve those by following below 4 commands):
+1. sudo service mongod stop 
+2. mongod --repair
+3. sudo service mongod star
+4. mongod --dbpath /usr/local/data/db
+- sudo apt-get remove mongodb* --purge (complete removal of mongo from your system).
+- sudo rm /tmp/mongodb-27017.sock(***aborting after fassert() failure).
+- mongod --dbpath /usr/local/data/db (Failed to stop mongod.service: Unit mongod.service not loaded).
+- mongo official website dont follow it for specific version download(http://www.techoism.com/install-mongodb-3-4-ubuntu-16-0414-04/).
+- leave this command when your trying through official website (sudo apt-get install -y mongodb-org) because based on already existing key it will consider updated version and.
+following issues will be faced when you shutdown or restart your system:
+- when your system got shutdown/when you restart you system(If you find these errors follow 3 steps in order (i.e 1.sudo service mongod stop, 2.mongod --repair 3.mongod --dbpath /usr/local/data/db)).
+- sudo kill all mongod ( when your system got shutdown/when you restart you system, sudo service mongod restart, mongod --dbpath /usr/local/data/db ).
+- listen(): bind() failed Address already in use for socket: 0.0.0.0:27017(1.mongod --repair 2.sudo service mongod start 3.mongod --dbpath /usr/local/data/db  )
+/*http://2.bp.blogspot.com/-hyKiVvQlboc/WTHXm3pbmzI/AAAAAAAAJ1c/8_JmIP-zpf0_r-pkMMgB_jpeRdC0XoLsQCK4B/s1600/logo.png*/

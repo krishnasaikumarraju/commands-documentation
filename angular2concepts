@@ -1,0 +1,21 @@
+when node version is properly installed then install using node package manager:
+
+npm install -g angular-cli(when you try that it gets installed with angular 6 version. it supports node version above 8.9 )
+npm install -g angular-cli@2.0.0/4.0.0(when you working on particular angular 2,4 version. it may supports regular node version above 6.1 and before working make sure of versions installated)
+
+
+for learning case best to follow angular official website and when you work on angular2 and above versions you can include to work on mutually with css libraries (i.e angular Material, Bootstrap)
+
+
+angular2,4 concepts:(git hub repositories)
+i) nested - example application.
+ii) pipe - example application.(filter)
+iii) services.- example application.
+iv) tdf - example application.
+v) routing - example application.
+vi) mdf - example application.
+vii)@component,oninit,@input,@output
+
+server Concepts:
+angular defaultly runs with clientend-server (i.e 4200)
+how angular integrates with backend-server

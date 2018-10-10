@@ -1,0 +1,85 @@
+Express
+you need to work on it and need in depth knowledge you can go with the folowing link http://devdocs.io/express/ unless you need to work on mean app the below mentioned following topics/concepts are enough.
+topics/concepts basic requirements to work on meanapp:
+
+//where you can find all those in right side menu.
+
+before getting into workflow please make through of all these concepts 
+
+1.Routing:
+my reference http://devdocs.io/express/guide/routing.
+basiclevel serverpage response - using http methods -
+var express = require('express')
+var app = express()
+
+// respond with "hello world" when a GET request is made to the homepage
+app.get('/home', function (req, res) {
+  res.send('hello world')
+})
+
+make use of all those methods and clear page on this.
+
+i) make through on application methods.
+these application methods are used in server file server.js(https://github.com/krishnasaikumarraju/MeanApp/blob/master/server.js)
+app.get()- example data
+app.use()- example data
+
+ii) make through on express methods.
+iii) call back function methods of req,res.
+iv) router methods(restApi methods api.js - https://github.com/krishnasaikumarraju/MeanApp/blob/master/server/routes/api.js)
+i hope below routing methods will be useful
+router.get()-example data 
+router.post()-example data 
+router.delete()-example data 
+router.put()-example data 
+
+
+
+
+
+
+2.database integration:
+my reference http://devdocs.io/express/guide/database-integration
+basic connection and installation:
+npm install mongodb (while installing particular version follow mongo documentation you can find all those details in mongodb menu)
+
+sample connection (regular steps to follow for mongodb):
+var MongoClient = require('mongodb').MongoClient //to invoke libraries
+
+connection establishment and to find collection to store data-
+MongoClient.connect('mongodb://localhost:27017/school', function (err, db) {
+  if (err) throw err
+
+  db.collection('students').find().toArray(function (err, result) {
+    if (err) throw err
+
+    console.log(result)
+  })
+})
+
+sample connection (following steps to use of mongoose framework reference link - https://github.com/krishnasaikumarraju/MeanApp/blob/master/server/routes/api.js):
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/studentTest');
+var db = mongoose.connection;
+
+db.on('error',console.error.bind(console,"connection error"));
+db.once("open",function(callback){
+  console.log('connection Establish');
+});
+
+var userschema = mongoose.Schema({
+  firstName :{type:String,required:true},
+  lastName:{type:String, required:true},
+  phone:{type:Number,required:true},
+  gender:{type:String,required:true},
+  dob:{type:String,required:true},
+  active:{type:Boolean,required:true}
+});
+var user = mongoose.model('data',userschema); // steps to make
+
+
+
+basiclevel :
+const express = require('express');
+const router = express.Router();

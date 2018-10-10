@@ -1,0 +1,46 @@
+good reference link for node and nvm:
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu make through of it.
+
+nodejs installation :
+sudo apt-get update
+sudo apt install nodejs(to install node updated version i.e 10.11.0)
+sudo n 6.11.2 (to install specific version) check the version get installed or not
+
+checking version:
+node -v
+
+
+npm usage:
+npm -v (check npm version it is dependent of node)
+no need to install npm seperately it is dependent of node(it gets installed based on node version as well version of npm is used based on node)
+
+nvm usage:
+Node Version Manager is a simple script to manage all of your active nodejs versions, with functionality such as: installation, executing commands with specific node.js versions, setting the PATH variable to use a specific node.js version.
+
+installation:
+run the below command in terminal(The installer can use git, curl, or wget to download nvm, whatever is available.)
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+
+On Linux, after running the install script, if you get nvm: command not found or see no feedback from your terminal after you type:
+
+command -v nvm
+
+simply close your current terminal, open a new terminal, and try verifying again installed version(i.e nvm -v).
+
+
+
+Regular Commands of nvm(after installation process done):
+
+nvm ls(to display node list in ths listed versions current active version is highlighted)
+nvm -v (to check active nvm version)
+nvm use v6.1 (from the listed versions of node you can select it based on requirement for the particular path)
+
+example try (default):
+nvm alias default v6.11.1 (you can set nvm default version)
+nvm use v4.0.0(to use particular version of node)
+
+
+errors:
+If you get an error or no output at all, close and reopen the terminal.
+
+
